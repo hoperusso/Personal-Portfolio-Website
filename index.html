@@ -1,0 +1,365 @@
+<style type="text/css">
+	
+:root {
+  --main-dark-gunmetal: rgb(41,36,42);
+  --main-ucla-blue: rgb(89,120,151);
+  --main-green: rgb(74,99,80);
+  --main-light-grey: rgb(212,222,224);
+  --main-pale-grey: rgb(251,252,252);
+}
+
+body {
+	background-color: var(--main-dark-gunmetal);
+	color: var(--main-pale-grey);
+	display: flex;
+	flex-direction: column;
+	font-family: Futura, Helvetica, sans-serif;
+}
+
+a {
+	color: var(--main-pale-grey);
+	text-decoration-line: none;
+	font-size: 3vmin;
+}
+
+a:hover {
+	font-weight: bold;
+}
+
+ ul {
+ 	list-style: none;
+ 	padding: 0;
+ }
+
+li {
+	margin-bottom: .1rem;
+	margin-top: .1rem;
+}
+
+#navbar {
+	background-color: var(--main-dark-gunmetal);
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height:55px;
+	z-index: 10
+}
+
+#nav-list {
+	display: flex;
+	margin-right: 2rem;
+}
+
+#nav-list a {
+  padding: 2rem;
+}
+
+#nav-list a:hover {
+  font-weight: bold;
+}
+
+#welcome-section {
+	background-color: var(--main-dark-gunmetal);
+	background-image: url("https://cdn.pixabay.com/photo/2016/03/26/13/09/notebook-1280538_1280.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: var(--main-pale-grey);
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	position: relative;
+	top: 55px;
+	left: 0;
+	width: 100vw;
+	height:30vh;
+	padding: 30px;
+}
+
+#name {
+	font-size: 5vmin;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+#skills-list {
+	font-size: 2vmin;
+}
+
+#skills-header {
+	font-weight: bold;
+	font-size: 3vmin;
+}
+
+#project-header {
+	background-color: rgb(41,36,42,.75);
+	background-size: cover;
+	color: var(--main-pale-grey);
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 55px;
+	left: 0;
+	width: 100vw;
+}
+
+.projects-section-header {
+  font-size: 4vmin;
+  border-bottom: 0.2rem solid var(--main-pale-grey);
+}
+
+#projects{
+	background-color: rgb(41,36,42,.75);
+	background-size: cover;
+	color: black;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	top: 55px;
+	left: 0;
+	width: 100vw;
+	height:400px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 4rem;
+  width: 100vw;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+@media (max-width: 30.625em) {
+  .projects-section {
+    padding: 6rem 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project {
+  background: var(--main-ucla-blue);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+
+.code {
+  color: var(--main-ucla-blue);
+  transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+  color: var(--main-green);
+}
+
+.project-image {
+  width: 350px;
+  object-fit: cover;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+
+.btn-show-all {
+  font-size: 2rem;
+  background: var(--main-ucla-blue);
+  transition: background 0.3s ease-out;
+}
+
+.btn-show-all:hover {
+  background: var(--main-ucla-blue);
+}
+
+.btn-show-all:hover > i {
+  transform: translateX(2px);
+}
+
+.btn-show-all > i {
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+#show-all {
+	background-color: rgb(41,36,42,.75);
+	background-size: cover;
+	color: var(--main-pale-grey);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: 55px;
+	left: 0;
+	height: 150px;
+}
+
+#contact {
+	top: 55px;
+	left: 0;
+	position:relative;
+	justify-content: center;
+	align-items: center;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 60vh;
+  background-color: rgb(212,222,224,.15);
+}
+
+.contact-section-header > h2 {
+  font-size: 5vmin;
+}
+
+@media (max-width: 28.75em) {
+  .contact-section-header > h2 {
+    font-size: 3vmin;
+  }
+}
+
+.contact-section-header > p {
+  font-style: italic;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-details {
+  font-size: 2vmin;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+.contact-details:hover {
+  transform: translateY(8px);
+}
+
+#footer {
+	background-color: var(--main-dark-gunmetal)
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-content: center;
+	text-align: center;
+	left: 0;
+	top: 55px;
+	height: 50px;
+	width: 100vw;
+}
+
+</style>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hope Russo: Web Designer</title>
+</head>
+<body>
+<nav id="navbar">
+	<ul id="nav-list">
+		<li><a href="#welcome-section">WELCOME</a></li>
+		<li><a href="#project-header">PROJECTS</a></li>
+		<li><a href="#contact">CONTACT</a></li>
+	</ul>
+</nav>
+<section id="welcome-section">
+	<h1 id="name">HOPE RUSSO</h1>
+	<ul id="skills-list">
+		<header id="skills-header">SKILLS & CERTIFICATIONS</header>
+		<li>Web Design Certificate (Free Code Camp)</li>
+		<li>HTML-intermediate</li>
+		<li>Photoshop-intermediate</li>
+		<li>Illustrator-intermediate</li>
+		<li>CSS-novice</li>
+	</ul>
+</section>
+<section id="project-header">
+	<h2 class="projects-section-header">These are a few of my most recent projects</h2>
+</section>
+<section id="projects">
+	<div>
+		    <a
+      href="https://codepen.io/hoperusso/pen/oNNQrKa"
+      target="_blank"
+      class="project project-tile"
+    >
+      <img
+        class="project-image"
+        src="https://cdn.pixabay.com/photo/2016/03/26/13/09/notebook-1280538_1280.jpg"
+        alt="project"
+      />
+      <p class="project-title">
+        <span class="code">&lt;</span>
+        Tribute Page
+        <span class="code">&#47;&gt;</span>
+      </p>
+    </a>
+	</div>
+</section>
+<section id="show-all">
+	<a href="https://codepen.io/hoperusso/" class="btn btn-show-all" target="_blank">Show all<i class="fas fa-chevron-right"></i></a>
+</section>
+<section id="contact" class="contact-section">
+  <div class="contact-section-header">
+    <h2>Let's get to work!</h2>
+    <p>Who's on your "daily grind" playlist?</p>
+  </div>
+  <div class="contact-links">
+    <a
+      href="https://facebook.com/freecodecamp"
+      target="_blank"
+      class="btn contact-details"
+      ><i class="fab fa-facebook-square"></i> Facebook</a
+    >
+    <a
+      id="profile-link"
+      href="https://github.com/freecodecamp"
+      target="_blank"
+      class="btn contact-details"
+      ><i class="fab fa-github"></i> GitHub</a
+    >
+    <a
+      href="https://twitter.com/freecodecamp"
+      target="_blank"
+      class="btn contact-details"
+      ><i class="fab fa-twitter"></i> Twitter</a
+    >
+    <a href="mailto:hopelowryrusso@gmail.com" class="btn contact-details"><i class="fas fa-at"></i> Email</a
+    >
+    <a href="tel:251-622-0603" class="btn contact-details"
+      ><i class="fas fa-mobile-alt"></i> Call me</a
+    >
+  </div>
+</section>
+
+<footer id="footer">
+	<p>&copy; Hope Russo 2019.
+  	</p>
+</footer>
+</body>
+</html>
